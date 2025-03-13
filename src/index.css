@@ -1,0 +1,117 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --primary: #d4af37; /* Dourado/amarelo da logo Prospec */
+    --primary-foreground: #000000;
+    --secondary: #000000; /* Preto da logo Prospec */
+    --secondary-foreground: #ffffff;
+    --background: #ffffff;
+    --foreground: #000000;
+    --muted: #f3f4f6;
+    --muted-foreground: #4b5563;
+    --accent: #f3f4f6;
+    --accent-foreground: #000000;
+
+    font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+    font-weight: 400;
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  .dark {
+    --primary: #d4af37; /* Mantendo o dourado/amarelo da logo Prospec */
+    --primary-foreground: #000000;
+    --secondary: #ffffff;
+    --secondary-foreground: #000000;
+    --background: #000000;
+    --foreground: #ffffff;
+    --muted: #1f2937;
+    --muted-foreground: #9ca3af;
+    --accent: #1f2937;
+    --accent-foreground: #ffffff;
+  }
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background-color: var(--background);
+  color: var(--foreground);
+}
+
+/* Estilos para o fullpage.js */
+.fp-watermark {
+  display: none !important;
+}
+
+.section {
+  background-color: var(--background) !important;
+  color: var(--foreground) !important;
+}
+
+/* Corrigindo a restrição de largura */
+.fp-overflow {
+  width: 100% !important;
+  max-width: 100% !important;
+}
+
+.fp-section, .fp-slide, .fp-overflow {
+  width: 100% !important;
+  height: 100% !important;
+  position: relative;
+}
+
+#fp-nav ul li a span, 
+.fp-slidesNav ul li a span {
+  background-color: var(--primary) !important;
+}
+
+a {
+  font-weight: 500;
+  color: var(--primary);
+  text-decoration: inherit;
+}
+a:hover {
+  color: var(--primary);
+  opacity: 0.8;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #000000;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #d4af37;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
