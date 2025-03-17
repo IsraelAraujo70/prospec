@@ -25,7 +25,7 @@ export function FullPageScroll({ children, anchors, onLeave }: FullPageScrollPro
   return (
     <div className="w-full h-screen bg-background" style={{ width: '100%', maxWidth: '100%' }}>
       <ReactFullpage
-        licenseKey={'YOUR_KEY_HERE'} // Você pode usar uma licença gratuita para desenvolvimento
+        licenseKey={'YOUR_KEY_HERE'}
         scrollingSpeed={1000}
         navigation
         navigationPosition="right"
@@ -33,8 +33,7 @@ export function FullPageScroll({ children, anchors, onLeave }: FullPageScrollPro
         showActiveTooltip
         anchors={anchors}
         onLeave={handleLeave}
-        credits={{ enabled: false }} // Adicionando credits para resolver o erro
-        // Adicionando configurações para garantir largura total
+        credits={{ enabled: false }}
         bigSectionsDestination="top"
         scrollOverflow={true}
         scrollOverflowReset={true}

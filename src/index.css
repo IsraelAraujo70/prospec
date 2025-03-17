@@ -73,6 +73,15 @@ body {
   background-color: var(--primary) !important;
 }
 
+/* Estilos para as tooltips das bolinhas de navegação */
+#fp-nav ul li .fp-tooltip {
+  color: var(--foreground) !important;
+}
+
+.dark #fp-nav ul li .fp-tooltip {
+  color: var(--foreground) !important;
+}
+
 a {
   font-weight: 500;
   color: var(--primary);

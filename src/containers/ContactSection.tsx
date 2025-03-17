@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
-import { Button } from '../components/Button';
 import { MapPin, Mail, Phone } from 'lucide-react';
+import { ContactForm } from '../components/ContactForm';
 
 export function ContactSection() {
   return (
@@ -56,59 +56,7 @@ export function ContactSection() {
             viewport={{ once: true }}
             className="bg-muted rounded-lg p-8"
           >
-            <form className="space-y-6">
-              <div>
-                <label htmlFor="name" className="block text-sm font-medium mb-2">
-                  Nome
-                </label>
-                <input
-                  type="text"
-                  id="name"
-                  className="w-full p-3 rounded-md border border-muted-foreground/20 bg-background"
-                  placeholder="Seu nome"
-                />
-              </div>
-
-              <div>
-                <label htmlFor="email" className="block text-sm font-medium mb-2">
-                  Email
-                </label>
-                <input
-                  type="email"
-                  id="email"
-                  className="w-full p-3 rounded-md border border-muted-foreground/20 bg-background"
-                  placeholder="seu.email@exemplo.com"
-                />
-              </div>
-
-              <div>
-                <label htmlFor="phone" className="block text-sm font-medium mb-2">
-                  Telefone
-                </label>
-                <input
-                  type="tel"
-                  id="phone"
-                  className="w-full p-3 rounded-md border border-muted-foreground/20 bg-background"
-                  placeholder="(00) 00000-0000"
-                />
-              </div>
-
-              <div>
-                <label htmlFor="message" className="block text-sm font-medium mb-2">
-                  Mensagem
-                </label>
-                <textarea
-                  id="message"
-                  rows={4}
-                  className="w-full p-3 rounded-md border border-muted-foreground/20 bg-background"
-                  placeholder="Digite sua mensagem"
-                ></textarea>
-              </div>
-
-              <Button type="submit" className="w-full">
-                Enviar Mensagem
-              </Button>
-            </form>
+            <ContactForm />
           </motion.div>
         </div>
       </div>
