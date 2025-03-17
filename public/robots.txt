@@ -1,0 +1,6 @@
+# robots.txt para prospecjr.com.br
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://prospecjr.com.br/sitemap.xml 

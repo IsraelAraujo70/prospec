@@ -6,6 +6,7 @@ import { AboutSection } from '../containers/AboutSection';
 import { TeamSection } from '../containers/TeamSection';
 import { ContactSection } from '../containers/ContactSection';
 import { Navigation } from '../components/Navigation';
+import { SEO } from '../components/SEO';
 
 export function HomePage() {
   const handleScrollDown = useCallback((sectionIndex: number) => {
@@ -21,6 +22,11 @@ export function HomePage() {
 
   return (
     <>
+      <SEO 
+        title="Prospec Jr. | Empresa Júnior de Engenharia de Minas da UNIFAL-MG"
+        description="A Prospec Jr. oferece consultoria e soluções para o setor de mineração, com expertise em ensaios laboratoriais, ensaios de campo e segurança do trabalho."
+        keywords="Prospec Jr, empresa júnior, engenharia de minas, UNIFAL-MG, consultoria, mineração, ensaios laboratoriais, ensaios de campo, segurança do trabalho, Poços de Caldas"
+      />
       <Navigation onNavigate={handleScrollDown} />
       <FullPageScroll
         anchors={['home', 'servicos', 'sobre', 'equipe', 'contato']}

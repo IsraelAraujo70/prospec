@@ -1,11 +1,15 @@
 import { motion } from 'framer-motion';
+import { Button } from '../components/Button';
 import { MapPin, Mail, Phone } from 'lucide-react';
 import { ContactForm } from '../components/ContactForm';
 
 export function ContactSection() {
   return (
-    <div className="h-full flex flex-col justify-center bg-background text-foreground w-full">
+    <section id="contato" className="h-full flex flex-col justify-center bg-background text-foreground w-full">
       <div className="container mx-auto px-4 py-16 w-full">
+        <header>
+          <h2 className="text-3xl md:text-4xl font-bold mb-6 text-center">Entre em Contato</h2>
+        </header>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           <div>
             <motion.div
@@ -14,37 +18,40 @@ export function ContactSection() {
               transition={{ duration: 0.5 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-3xl md:text-4xl font-bold mb-6">Entre em Contato</h2>
               <p className="text-lg mb-8">
                 Estamos prontos para atender às suas necessidades. Entre em contato conosco para saber mais sobre nossos serviços ou para solicitar um orçamento.
               </p>
 
               <div className="space-y-4 mb-8">
-                <div className="flex items-start">
-                  <MapPin className="h-6 w-6 text-primary mr-3 mt-1" />
+                <article className="flex items-start">
+                  <MapPin className="h-6 w-6 text-primary mr-3 mt-1" aria-hidden="true" />
                   <div>
                     <h3 className="font-medium">Endereço</h3>
-                    <p className="text-muted-foreground">
+                    <address className="text-muted-foreground not-italic">
                       Rodovia José Aurélio Vilela, 11999, Cidade Universitária, Prédio F, Poços de Caldas, MG. CEP 37715-400
-                    </p>
+                    </address>
                   </div>
-                </div>
+                </article>
 
-                <div className="flex items-start">
-                  <Mail className="h-6 w-6 text-primary mr-3 mt-1" />
+                <article className="flex items-start">
+                  <Mail className="h-6 w-6 text-primary mr-3 mt-1" aria-hidden="true" />
                   <div>
                     <h3 className="font-medium">Email</h3>
-                    <p className="text-muted-foreground">juniorprospec@gmail.com</p>
+                    <p className="text-muted-foreground">
+                      <a href="mailto:juniorprospec@gmail.com" className="hover:underline">juniorprospec@gmail.com</a>
+                    </p>
                   </div>
-                </div>
+                </article>
 
-                <div className="flex items-start">
-                  <Phone className="h-6 w-6 text-primary mr-3 mt-1" />
+                <article className="flex items-start">
+                  <Phone className="h-6 w-6 text-primary mr-3 mt-1" aria-hidden="true" />
                   <div>
                     <h3 className="font-medium">Telefone</h3>
-                    <p className="text-muted-foreground">(35) 9907-0663</p>
+                    <p className="text-muted-foreground">
+                      <a href="tel:+5535990706630" className="hover:underline">(35) 9907-0663</a>
+                    </p>
                   </div>
-                </div>
+                </article>
               </div>
             </motion.div>
           </div>
@@ -60,6 +67,6 @@ export function ContactSection() {
           </motion.div>
         </div>
       </div>
-    </div>
+    </section>
   );
 } 
